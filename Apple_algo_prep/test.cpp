@@ -1,6 +1,10 @@
 #include "pch.h"
+#include "Algos/Node.h"
 
 TEST(TestCaseName, TestName) {
-  EXPECT_EQ(1, 1);
-  EXPECT_TRUE(true);
+	auto node = Node();
+	node.Next = new Node();
+	node.Next->Value = 2;
+  EXPECT_EQ(2, node.Next->Value);
+ 
 }
